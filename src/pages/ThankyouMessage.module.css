@@ -1,0 +1,77 @@
+.circleWrapper {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.circleSvg {
+  transform: rotate(-90deg);
+}
+
+.circleBg {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 4;
+}
+
+.circleAnim {
+  fill: none;
+  stroke: #3b82f6;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  animation: drawCircle 1.2s ease-out forwards;
+}
+
+.checkIcon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  font-size: 28px;
+  color: #3b82f6;
+  opacity: 0;
+  transform: scale(0.4);
+  transition: all 0.4s ease;
+}
+
+.checkShow {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.shadowShow {
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
+}
+
+.sparkle {
+  position: absolute;
+  top: -40px;
+  right: -20px;      /* moved slightly right */
+  width: 40px;      /* smaller size */
+  opacity: 0;
+  transform: scale(0.6);
+  transition: all 0.4s ease;
+}
+
+.sparkleShow {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.message {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.6s ease;
+}
+
+.messageShow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes drawCircle {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
